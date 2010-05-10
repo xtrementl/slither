@@ -1,0 +1,157 @@
+<!--
+----------------------------------------------------------------------------------------
+Slither: Taking a Bite Out of Canvas (1.0)
+----------------------------------------------------------------------------------------
+A modern replica of the 2D, retro "Snake" or "Nibbles" game, wherein the player navigates
+a snake around the screen eating objects that are scattered about the playing area. This
+action in turn grows the length of the snake and increases the player's score. When all
+food items have been eaten, the next level starts: each with a touch more of difficulty
+(poison items, walls, and so on).
+----------------------------------------------------------------------------------------
+
+http://www.brokenresolve.com/2010/05/slither-game/ 
+Released 05-10-2010.
+
+Copyright 2010 Erik Johnson.
+Licensed under the LGPL Version 3 License.
+
+Includes modified "KSnake" graphic, part of the "Crystal Project Icons" icon set.
+Copyright 2006-2007 Everaldo Coelho. Released under the LGPL license.
+
+Includes generated spinner ajax-loader graphic.
+Copyright 2007-2010 LoadInfo.net. Free for personal use.
+
+Includes modified "Snake (Snakes) Icon", part of the "Black Ink Grunge Stamps
+Textures Icons" icon set and "Checkered Racing Flags Icon", "Clear Skull (Skulls) Icon",
+part of the "Glossy Black Icons" icon set. Copyright 2009 MySiteMyWay ETC Network.
+Free for personal use.
+
+Includes modified "Pause Icon" graphic, part of the "Vista Style Play/Stop/Pause Icon Set".
+Copyright 2006-2010 Icons-Land. Free for personal use.
+
+Includes modified "Christmas, Star icon", part of the "Xmas pack" icon set.
+Copyright 2006 Blackblurr. Free for non-commercial use.
+
+----------------------------------------------------------------------------------------
+This file is part of Slither.
+
+Slither is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Slither is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with Slither.  If not, see <http://www.gnu.org/licenses/>.
+// -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <title>Slither</title>
+
+    <!-- jQuery 1.4.2 -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    <!-- Slither Core -->
+    <script type="text/javascript" src="js/slither/core.js"></script>
+
+    <!-- Game Driver Code -->
+    <script type="text/javascript" src="js/driver.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+    <!-- wrapper container -->
+    <div id="wrapper">
+        <!-- content container -->
+        <div id="content">
+            <!-- header container -->
+            <div id="header">
+                <h1>Slither</h1>
+                <h3>:: Taking A Bite Out Of Canvas! ::</h3>
+            </div><!-- /#header/ -->
+
+            <!-- game area container -->
+            <div id="game-area">
+                <!-- canvas drawing palette -->
+                <canvas class="palette" width="500" height="500"></canvas>
+
+                <!-- inset game message container -->
+                <div id="game-msg" class="invisible loading">
+                    <div class="msg"></div>
+                    <div class="submsg"></div>
+                </div><!-- /#game-msg/ -->
+
+                <!-- inset help container -->
+                <div id="help" class="hidden disabled">
+                    <div class="area controls">
+                        <div class="header">Controls:</div>
+                        <div class="arrow">
+                            <div class="icon left"></div> Move Left
+                        </div>
+                        <div class="arrow">
+                            <div class="icon up"></div> Move Up
+                        </div>
+                        <div class="arrow">
+                            <div class="icon down"></div> Move Down
+                        </div>
+                        <div class="arrow">
+                            <div class="icon right"></div> Move Right
+                        </div>
+                        <div class="enter">
+                            <span>&lt;Enter&gt;</span> Start
+                        </div>
+                        <div class="esc">
+                            <span>&lt;Esc&gt;</span> Pause
+                        </div>
+                    </div>
+                    <div class="area instructions">
+                        <div class="header">Instructions:</div>
+                        <p>Navigate the snake, eating food to grow longer.
+                        Master each level, beware the poison!</p>
+                    </div>
+                </div><!-- /#help/ -->
+            </div><!-- /#game-area/ -->
+
+            <!-- heads-up display container -->
+            <div id="hud" class="hidden">
+                <ul>
+                    <li>
+                        <div class="header">Score:</div>
+                        <div id="score">-</div>
+                    </li>
+                    <li>
+                        <div class="header">Lives:</div>
+                        <div id="lives">-</div>
+                    </li>
+                    <li>
+                        <div class="header">Speed:</div>
+                        <div id="speed">-</div>
+                    </li>
+                    <li>
+                        <div class="header">Level:</div>
+                        <div id="level">-</div>
+                    </li>
+                    <li class="no-border">
+                        <div class="header">Upgrades:</div>
+                        <div id="upgrades">-</div>
+                    </li>
+                </ul>
+                <div class="help-text"><span>Help:</span> Hover over game.</div>
+            </div><!-- /#hud/ -->
+
+            <!-- footer container -->
+            <div id="footer">&copy;2010 :: Erik Johnson</div>
+        </div><!-- /#content/ -->
+    </div><!-- /#wrapper/ -->
+</body>
+</html>

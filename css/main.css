@@ -1,0 +1,535 @@
+/*
+    ----------------------------------------------------------------------------------------
+    Package: Slither
+    This file contains the necessary styles for the HTML
+    portion of the game's user interface component.
+    ----------------------------------------------------------------------------------------
+
+    Copyright 2010 Erik Johnson.
+    Licensed under the LGPL Version 3 License.
+
+    Includes modified "KSnake" graphic, part of the "Crystal Project Icons" icon set.
+    Copyright 2006-2007 Everaldo Coelho. Released under the LGPL license.
+
+    Includes generated spinner ajax-loader graphic.
+    Copyright 2007-2010 LoadInfo.net. Free for personal use.
+
+    Includes modified "Snake (Snakes) Icon", part of the "Black Ink Grunge Stamps
+    Textures Icons" icon set and "Checkered Racing Flags Icon", "Clear Skull (Skulls) Icon",
+    part of the "Glossy Black Icons" icon set. Copyright 2009 MySiteMyWay ETC Network.
+    Free for personal use.
+
+    Includes modified "Pause Icon" graphic, part of the "Vista Style Play/Stop/Pause Icon Set".
+    Copyright 2006-2010 Icons-Land. Free for personal use.
+
+    Includes modified "Christmas, Star icon", part of the "Xmas pack" icon set.
+    Copyright 2006 Blackblurr. Free for non-commercial use.
+
+    ----------------------------------------------------------------------------------------
+    This file is part of Slither.
+
+    Slither is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Slither is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with Slither.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #222 url("../img/skin.gif") repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden
+}
+
+#wrapper {
+    height: 1px;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+#content {
+    height: 650px;
+    left: 50%;
+    margin-left: -260px;
+    position: absolute;
+    top: -325px;
+    width: 520px;
+}
+
+#header {
+    font-family: verdana, arial;
+}
+
+#header h1 {
+    background-position: 0 -5px !important;
+    display: block;
+    color: #596cc9;
+    font-size: 25px;
+    height: 90px;
+    margin: 0 0 0 90px;
+    padding: 0;
+    text-indent: -1999px;
+    width: 320px;
+}
+
+#header h3 {
+    color: #404e91;
+    display: none;
+    font-size: 13px;
+    margin: -5px 0 0 50px;
+    padding: 0;
+    text-transform: lowercase;
+}
+
+#footer {
+    background-position: 90px -125px !important;
+    clear: both;
+    color: #5997a8;
+    font-size: 10px;
+    height: 60px;
+    padding: 2px 0 0 0;
+    text-align: right;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    width: 500px;
+}
+
+#game-area {
+    background-color: #444 !important;
+    background-position: 0 0 !important;
+    border: 2px solid #1b1b1b;
+    float: left;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+}
+
+#game-msg {
+    -moz-box-shadow: -2px -2px 40px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: -2px -2px 40px rgba(0, 0, 0, 0.7);
+    background-color: #333 !important;
+    border-bottom: 2px solid #624144;
+    border-top: 2px solid #916166;
+    box-shadow: -2px -2px 40px rgba(0, 0, 0, 0.7);
+    font-family: arial, verdana, sans-serif;
+    height: 40px;
+    left: 0;
+    opacity: 0.95;
+    overflow: hidden;
+    padding: 20px 0;
+    position: absolute;
+    text-align: left;
+    text-indent: 25px;
+    top: 205px;
+    width: 500px;
+    z-index: 999;
+}
+
+#game-msg div.msg {
+    color: #4bafcc;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#game-msg div.submsg {
+    color: #8cafcc;
+    font-size: 12px;
+    margin: -25px 25px 0 0;
+    padding-bottom: 13px;
+    text-align: right;
+}
+
+#game-msg.loading {
+    background: #333 url("../img/loading.gif") no-repeat 15px 10px !important;
+    text-align: left;
+}
+
+#game-msg.loading div.msg {
+    background: #333 url("../img/loading-txt.gif") no-repeat !important;
+    height: 75px;
+    margin: -15px 0 0 75px;
+    text-indent: -1999px;
+}
+
+#game-msg.loading div.submsg {
+    display: none;
+}
+
+#game-msg.speed {
+    background-position: -498px 0 !important;
+}
+
+#game-msg.speed div.msg {
+    text-indent: -1999px;
+}
+
+#game-msg div.speed-btns {
+    clear: both;
+    margin: -43px 0 0 346px;
+    padding-bottom: 37px;
+    width: 150px;
+}
+
+#game-msg a {
+    border: none;
+    display: block;
+    float: left;
+    height: 23px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-indent: -1999px;
+    width: 23px;
+}
+
+#game-msg a:active, #game-msg a:hover,
+#game-msg a:visited {
+
+    border: none;
+    outline: none;
+}
+
+#game-msg a.key1 {
+    background-position: -501px -451px !important;
+}
+
+#game-msg a.key1:hover {
+    background-position: -616px -451px !important;
+}
+
+#game-msg a.key1:active {
+    background-position: -731px -451px !important;
+}
+
+#game-msg a.key2 {
+    background-position: -523px -451px !important;
+}
+
+#game-msg a.key2:hover {
+    background-position: -638px -451px !important;
+}
+
+#game-msg a.key2:active {
+    background-position: -753px -451px !important;
+}
+
+#game-msg a.key3 {
+    background-position: -546px -451px !important;
+}
+
+#game-msg a.key3:hover {
+    background-position: -661px -451px !important;
+}
+
+#game-msg a.key3:active {
+    background-position: -776px -451px !important;
+}
+
+#game-msg a.key4 {
+    background-position: -569px -451px !important;
+}
+
+#game-msg a.key4:hover {
+    background-position: -684px -451px !important;
+}
+
+#game-msg a.key4:active {
+    background-position: -799px -451px !important;
+}
+
+#game-msg a.key5 {
+    background-position: -592px -451px !important;
+}
+
+#game-msg a.key5:hover {
+    background-position: -707px -451px !important;
+}
+
+#game-msg a.key5:active {
+    background-position: -822px -451px !important;
+}
+
+#game-msg.pause {
+    background-position: -498px -72px !important;
+}
+
+#game-msg.pause div.msg {
+    text-indent: -1999px;
+}
+
+#game-msg.pause div.submsg {
+    display: none;
+}
+
+#game-msg.new-level {
+    background-position: -498px -145px !important;
+}
+
+#game-msg.new-level div.msg {
+    text-indent: -1999px;
+}
+
+#game-msg.new-level div.submsg {
+    display: none;
+}
+
+#game-msg.die {
+    background-position: -498px -223px !important;
+}
+
+#game-msg.die div.msg {
+    text-indent: -1999px;
+}
+
+#game-msg.die div.submsg {
+    display: none;
+}
+
+#game-msg.lose {
+    background-position: -498px -295px !important;
+}
+
+#game-msg.lose div.msg {
+    color: #aa310c;
+    font-size: 32px;
+    margin: 5px 0 0 90px;
+    text-indent: -1999px;
+}
+
+#game-msg.lose div.submsg {
+    display: none;
+    margin: 0 52px 0 0;
+}
+
+#game-msg.win {
+    background-position: -498px -370px !important;
+}
+
+#game-msg.win div.msg {
+    color: #72ad2d;
+    font-size: 32px;
+    margin: 5px 0 0 90px;
+    text-indent: -1999px;
+}
+
+#game-msg.win div.submsg {
+    display: none;
+    margin: 0 66px 0 0;
+}
+
+#help {
+    background-color: #000;
+    border-bottom: 1px dotted #003d63;
+    border-top: 1px dotted #005e99;
+    color: #fff;
+    font-family: arial, verdana, sans-serif;
+    font-size: 10px;
+    height: 85px;
+    opacity: 0.7;
+    position: relative;
+    padding: 10px 0;
+    margin-top: -107px;
+    width: 500px;
+}
+
+#game-area:hover #help {
+    display: block;
+}
+
+#game-area:hover #help.disabled {
+    display: none;
+}
+
+#help div.area {
+    color: #888;
+    float: left;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+}
+
+#help div.area div.header {
+    background-color: #111;
+    border-top: 1px dotted #333;
+    border-bottom: 1px dotted #333;
+    color: #ccc;
+    display: block;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 10px 0;
+    padding: 2px 0px !important;
+    text-align: center;
+    width: 210px;
+}
+
+#help div.controls {
+    border-right: 1px dotted #222;
+    margin-left: 10px;
+    padding-right: 5px;
+    width: 240px;
+}
+
+#help div.controls div.arrow,
+#help div.controls div.esc,
+#help div.controls div.enter {
+    float: left;
+    width: 80px;
+}
+
+#help div.controls div.arrow div.icon {
+    float: left;
+    height: 16px;
+    margin: 2px 3px 0 0;
+    overflow: hidden;
+    width: 16px;
+}
+
+#help div.controls div.header {
+    background: #222;
+    border-top: 1px dotted #444;
+    border-bottom: 1px dotted #444;
+    width: 230px;
+}
+
+#help div.controls div.arrow div.left {
+    background-position: -908px -451px !important;
+}
+
+#help div.controls div.arrow div.up {
+    background-position: -924px -451px !important;
+}
+
+#help div.controls div.arrow div.right {
+    background-position: -940px -451px !important;
+    padding-right: 0;
+}
+
+#help div.controls div.arrow div.down {
+    background-position: -956px -451px !important;
+}
+
+#help div.controls div.esc, 
+#help div.controls div.enter {
+    background: none;
+}
+
+#help div.controls div.esc span, 
+#help div.controls div.enter span{
+    color: #aaa;
+}
+
+#help div.instructions {
+    padding-left: 13px;
+    width: 220px;
+}
+
+#help div.instructions span {
+    padding: 0;
+}
+
+#help div.instructions div.header {
+    width: 215px;
+}
+
+#hud {
+    -moz-box-shadow: -2px -2px 100px rgba(5, 5, 5, 0.6) inset;
+    -webkit-box-shadow: -2px -2px 100px rgba(5, 5, 5, 0.6) inset;
+    background-color: #444;
+    border: 2px solid #1b1b1b;
+    box-shadow: -2px -2px 100px rgba(5, 5, 5, 0.6) inset;
+    color: #8cafcc;
+    float: left;
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+    overflow: hidden;
+    text-align: center;
+    width: 150px;
+}
+
+#hud ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    width: 140px;
+}
+
+#hud ul li {
+    border-bottom: 1px dotted #292929;
+    margin: 5px;
+    padding: 5px 0;
+}
+
+#hud ul li.no-border {
+    border-bottom: none !important;
+}
+
+#hud ul li div {
+    font-size: 20px;
+}
+
+#upgrades {
+    font-size: 18px !important;
+}
+
+#hud ul li div.header {
+    color: #4bafcc;
+    font-size: 11px;
+}
+
+#hud div.help-text {
+    color: #666;
+    font-size: 10px;
+    padding: 0 0 10px 0;
+    text-align: center;
+}
+
+#hud div.help-text span {
+    color: #4e6172;
+}
+
+#header h1, #footer {
+    background: url("../img/logo.png") no-repeat 0 0;
+}
+
+#game-area, #game-msg, #game-msg a, #help div.controls div.arrow div.icon {
+    background: none;
+    background-repeat: no-repeat;
+}
+
+.sprites, #game-msg.sprites div.msg a {
+    background-image: url("../img/sprites.gif") !important;
+}
+
+#game-area:after, #help:after, #hud:after,
+#gamemsg div.speed-btns:after, #help div.controls:after  {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
