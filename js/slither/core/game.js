@@ -268,11 +268,8 @@ Game.setupLevels = function() {
 
     // provide wrapper for class method, so we can track generated objects for level restarts
     var genObjects = function(range, classes, bias) {
-        var objs = _this.genObjects(range, classes, bias);
-
-        if ($.isArray(objs)) {
-            prevObjInfo = prevObjInfo.concat(objs); // save the objects generated
-        }
+        var objs = Slither.makeArray(_this.genObjects(range, classes, bias));
+        Array.prototype.push.apply(prevObjInfo, objs); // save the objects generated
     };
 
     var addLevel = function(level) { // wrapper to add new level to manager
